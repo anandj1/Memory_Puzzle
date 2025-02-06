@@ -153,7 +153,7 @@ class MemoryGame {
             }
             this.flippedCards = [];
             this.canFlip = true;
-        }, 1000);
+        }, 600);
     }
 
     setupEventListeners() {
