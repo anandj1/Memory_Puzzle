@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            background: #f0f0f0;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .game-info {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .difficulty {
+            margin: 10px 0;
+        }
+
+        .difficulty button {
+            padding: 8px 16px;
+            margin: 0 5px;
+            border: none;
+            border-radius: 4px;
+            background: #4CAF50;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .difficulty button.active {
+            background: #2E7D32;
+        }
+
+        .game-grid {
+            display: grid;
+            gap: 10px;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 10px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .card {
+            aspect-ratio: 1;
+            border-radius: 8px;
+            background: #fff;
+            cursor: pointer;
+            transition: transform 0.3s;
+            position: relative;
+            transform-style: preserve-3d;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .card.flipped {
+            transform: rotateY(180deg);
+        }
+
+        .card-front,
+        .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .card-front {
+            background: #2196F3;
+        }
+
+        .card-back {
+            background: #ffffff;
+            transform: rotateY(180deg);
+        }
+
+        .shape {
+            width: 60%;
+            height: 60%;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            .game-grid {
+                gap: 5px;
+                padding: 5px;
+            }
+            
+            .difficulty button {
+                padding: 6px 12px;
+                margin: 0 2px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="game-info">
+        <h1>Memory Game</h1>
+        <p>Current Moves: <span id="moves">0</span></p>
+        <p>Total Moves: <span id="total-moves">0</span></p>
+        <div class="difficulty">
+            <button data-size="4" class="active">Easy (4x4)</button>
+            <button data-size="6">Medium (6x6)</button>
+            <button data-size="8">Hard (8x8)</button>
+        </div>
+    </div>
+    <div class="game-grid"></div>
+    <script type="module" src="/game.js"></script>
+</body>
+</html>
