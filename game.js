@@ -13,44 +13,45 @@ class MemoryGame {
         
         // Extended shapes array with unique combinations for 8x8 grid (32 pairs)
         this.shapes = [
-            { type: 'circle', color: '#FF5252' },
-            { type: 'square', color: '#4CAF50' },
-            { type: 'triangle', color: '#FFC107' },
-            { type: 'diamond', color: '#2196F3' },
-            { type: 'pentagon', color: '#9C27B0' },
-            { type: 'hexagon', color: '#FF9800' },
-            { type: 'star', color: '#607D8B' },
-            { type: 'heart', color: '#E91E63' },
-            { type: 'octagon', color: '#795548' },
-            { type: 'cross', color: '#009688' },
-            { type: 'moon', color: '#673AB7' },
-            { type: 'oval', color: '#3F51B5' },
-            { type: 'rectangle', color: '#8BC34A' },
-            { type: 'trapezoid', color: '#CDDC39' },
-            { type: 'parallelogram', color: '#FF4081' },
-            { type: 'rhombus', color: '#00BCD4' },
-            // Additional shapes with different colors for hard mode
-            { type: 'circle', color: '#D32F2F' },
-            { type: 'square', color: '#388E3C' },
-            { type: 'triangle', color: '#FFA000' },
-            { type: 'diamond', color: '#1976D2' },
-            { type: 'pentagon', color: '#7B1FA2' },
-            { type: 'hexagon', color: '#F57C00' },
-            { type: 'star', color: '#455A64' },
-            { type: 'heart', color: '#C2185B' },
-            { type: 'octagon', color: '#5D4037' },
-            { type: 'cross', color: '#00796B' },
-            { type: 'moon', color: '#512DA8' },
-            { type: 'oval', color: '#303F9F' },
-            { type: 'rectangle', color: '#689F38' },
-            { type: 'trapezoid', color: '#AFB42B' },
-            { type: 'parallelogram', color: '#EC407A' },
-            { type: 'rhombus', color: '#0097A7' }
+            { type: 'circle', color: '#FF0000' },      // Pure Red
+            { type: 'square', color: '#00FF00' },      // Pure Green
+            { type: 'triangle', color: '#0000FF' },    // Pure Blue
+            { type: 'diamond', color: '#FFD700' },     // Gold
+            { type: 'pentagon', color: '#FF1493' },    // Deep Pink
+            { type: 'hexagon', color: '#00FFFF' },     // Cyan
+            { type: 'star', color: '#FF4500' },        // Orange Red
+            { type: 'heart', color: '#800080' },       // Purple
+            { type: 'octagon', color: '#008000' },     // Green
+            { type: 'cross', color: '#FF69B4' },       // Hot Pink
+            { type: 'moon', color: '#4B0082' },        // Indigo
+            { type: 'oval', color: '#FF8C00' },        // Dark Orange
+            { type: 'rectangle', color: '#8B4513' },   // Saddle Brown
+            { type: 'trapezoid', color: '#483D8B' },   // Dark Slate Blue
+            { type: 'parallelogram', color: '#2F4F4F' },// Dark Slate Gray
+            { type: 'rhombus', color: '#9400D3' },     // Dark Violet
+            // Different shapes for hard mode with completely different colors
+            { type: 'circle', color: '#8B0000' },      // Dark Red
+            { type: 'square', color: '#006400' },      // Dark Green
+            { type: 'triangle', color: '#000080' },    // Navy
+            { type: 'diamond', color: '#BDB76B' },     // Dark Khaki
+            { type: 'pentagon', color: '#C71585' },    // Medium Violet Red
+            { type: 'hexagon', color: '#008B8B' },     // Dark Cyan
+            { type: 'star', color: '#CD5C5C' },        // Indian Red
+            { type: 'heart', color: '#4B0082' },       // Indigo
+            { type: 'octagon', color: '#556B2F' },     // Dark Olive Green
+            { type: 'cross', color: '#8B008B' },       // Dark Magenta
+            { type: 'moon', color: '#9932CC' },        // Dark Orchid
+            { type: 'oval', color: '#E9967A' },        // Dark Salmon
+            { type: 'rectangle', color: '#8FBC8F' },   // Dark Sea Green
+            { type: 'trapezoid', color: '#B8860B' },   // Dark Goldenrod
+            { type: 'parallelogram', color: '#DAA520' },// Goldenrod
+            { type: 'rhombus', color: '#FF00FF' }      // Magenta
         ];
 
         this.initializeGame();
         this.setupEventListeners();
     }
+
 
     initializeGame() {
         this.grid.style.gridTemplateColumns = `repeat(${this.gridSize}, 1fr)`;
