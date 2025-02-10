@@ -148,7 +148,7 @@ class MemoryGame {
             } else {
                 this.matchedPairs++;
                 if (this.matchedPairs === (this.gridSize * this.gridSize) / 2) {
-                    alert(`Congratulations! You won in ${this.moves} moves!\nTotal moves in all games: ${this.totalMoves}`);
+                    alert(`Congratulations Homey! 😚😚 You won in ${this.moves} moves!\nTotal moves in all games: ${this.totalMoves}`);
                 }
             }
             this.flippedCards = [];
